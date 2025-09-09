@@ -52,6 +52,12 @@ export default function ProblemSection() {
       desc: "No enforceable rights means no leverage to negotiate deals.",
       number: "05",
     },
+    {
+      icon: "🌐",
+      title: "Global Market Access Challenges",
+      desc: "Innovators struggle to expand internationally without verified IP rights.",
+      number: "06",
+    },
   ];
 
   return (
