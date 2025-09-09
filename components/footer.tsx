@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Linkedin, Twitter, Facebook } from 'lucide-react';
-import Logo from '../app/assets/Logo.svg';
+import Logo from '../app/assets/Logo-White-Text-Big.png';
 import Image from 'next/image';
 
 const quickLinks = [
@@ -44,13 +44,11 @@ export default function Footer() {
               <Image
                 src={Logo}
                 alt="Mintellect"
-                width={50}
-                height={50}
-                className="w-12 h-12 sm:w-14 sm:h-14"
+                width={150}
+                height={150}
+                className="w-12 h-12 sm:w-14 sm:h-14 lg:w-28 lg:h-28"
               />
-              <span className="font-bold text-lg sm:text-xl text-white">
-                Mintellect
-              </span>
+       
             </Link>
 
             {/* Tagline */}
