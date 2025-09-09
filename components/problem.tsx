@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState, useEffect } from "react";
 
 export default function ProblemSection() {
@@ -10,7 +9,7 @@ export default function ProblemSection() {
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold: 0.1 }
+      { threshold: 0.15 }
     );
 
     const section = document.getElementById("problem");
@@ -22,101 +21,52 @@ export default function ProblemSection() {
   }, []);
 
   const problems = [
-    {
-      icon: "⏰",
-      title: "3-5 Year Patent Delays",
-      desc: "Innovations lose relevance or become obsolete during the lengthy patent approval process.",
-      number: "01",
-    },
-    {
-      icon: "📉",
-      title: "Lost Startup Growth",
-      desc: "Delays reduce employment by 21% and sales by 28% per year, stifling innovation.",
-      number: "02",
-    },
-    {
-      icon: "🏛️",
-      title: "Idle Academic Research",
-      desc: "90%+ of university patents remain unused, wasting valuable research.",
-      number: "03",
-    },
-    {
-      icon: "💰",
-      title: "Investor Hesitancy",
-      desc: "Lack of granted IP deters early-stage capital investment.",
-      number: "04",
-    },
-    {
-      icon: "⚖️",
-      title: "Legal Uncertainty",
-      desc: "No enforceable rights means no leverage to negotiate deals.",
-      number: "05",
-    },
-    {
-      icon: "🌐",
-      title: "Global Market Access Challenges",
-      desc: "Innovators struggle to expand internationally without verified IP rights.",
-      number: "06",
-    },
+    { icon: "⏰", title: "3-5 Year Patent Delays", desc: "Innovations lose relevance during the lengthy patent approval process.", number: "01" },
+    { icon: "📉", title: "Lost Startup Growth", desc: "Delays reduce employment by 21% and sales by 28% per year.", number: "02" },
+    { icon: "🏛️", title: "Idle Academic Research", desc: "90%+ of university patents remain unused, wasting research.", number: "03" },
+    { icon: "💰", title: "Investor Hesitancy", desc: "Lack of granted IP deters early-stage capital investment.", number: "04" },
+    { icon: "⚖️", title: "Legal Uncertainty", desc: "No enforceable rights means no leverage to negotiate deals.", number: "05" },
+    { icon: "🌐", title: "Global Market Access Challenges", desc: "Innovators struggle to expand internationally without verified IP rights.", number: "06" },
   ];
 
   return (
     <section
       id="problem"
-      className="relative w-full bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 py-24 overflow-hidden text-white"
+      className="relative w-full py-24 bg-gradient-to-br from-[#1A2A80] via-[#3B38A0] to-[#7A85C1] text-white overflow-hidden"
     >
-      {/* Floating background glow elements */}
+      {/* Background floating shapes */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-1/4 w-32 h-32 rounded-full bg-cyan-400/30 blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-1/3 w-40 h-40 rounded-full bg-cyan-300/20 blur-3xl animate-pulse-slow"></div>
-        <div className="absolute top-1/3 right-1/4 w-28 h-28 rounded-full bg-cyan-400/25 blur-2xl animate-pulse-slow"></div>
+        <div className="absolute top-10 left-10 w-36 h-36 rounded-full bg-[#B2B0E8]/20 blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 rounded-full bg-[#7A85C1]/25 blur-3xl animate-pulse-slow"></div>
+        <div className="absolute top-1/3 right-1/4 w-28 h-28 rounded-full bg-[#B2B0E8]/30 blur-2xl animate-pulse-slow"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 flex flex-col gap-20">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-16 relative z-10">
         {/* Section Header */}
-        <div
-          className={`text-center transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-3">What We Solve</h2>
-          <div className="flex items-center justify-center gap-2">
-            <span className="w-16 h-1 bg-cyan-400 rounded-full"></span>
-            <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-            <span className="w-16 h-1 bg-cyan-400 rounded-full"></span>
-          </div>
+        <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4">What We Solve</h2>
+          <p className="text-[#B2B0E8] max-w-2xl mx-auto text-lg md:text-xl">
+            We tackle the challenges that prevent innovation from reaching the world.
+          </p>
         </div>
 
         {/* Problems Grid */}
-        <div
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-200 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          {problems.map((problem, idx) => (
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {problems.map((p, idx) => (
             <div
               key={idx}
-              className="relative bg-blue-900/60 backdrop-blur-md rounded-xl p-6 shadow-lg flex flex-col gap-4 hover:scale-105 transform transition-transform duration-500"
+              className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 shadow-lg flex flex-col gap-4 hover:scale-105 transform transition-transform duration-500"
             >
               <div className="flex items-center gap-4">
-                <div className="relative flex items-center justify-center w-12 h-12 bg-cyan-400/20 rounded-full text-xl">
-                  {problem.icon}
+                <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#B2B0E8]/20 text-xl">
+                  {p.icon}
                 </div>
-                <h3 className="text-xl font-semibold">{problem.title}</h3>
+                <h3 className="text-[#B2B0E8] text-xl font-semibold">{p.title}</h3>
               </div>
-              <p className="text-blue-200 leading-relaxed">{problem.desc}</p>
-              <div className="absolute top-4 right-4 text-2xl font-bold text-cyan-400/50">
-                {problem.number}
-              </div>
+              <p className="text-[#B2B0E8]/80 leading-relaxed">{p.desc}</p>
+              <div className="absolute top-4 right-4 text-2xl font-bold text-[#B2B0E8]/50">{p.number}</div>
             </div>
           ))}
-        </div>
-
-        {/* Optional central connecting lines */}
-        <div className="hidden lg:block absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="w-full h-full border-t border-cyan-400/20 rounded-full"></div>
-          </div>
         </div>
       </div>
     </section>
