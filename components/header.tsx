@@ -22,8 +22,9 @@ export default function Header() {
   const navItems = [
     { name: 'Home', href: '#' },
     { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Courses', href: '#courses' },
+    { name: 'Problems', href: '#problem' },
+    { name: 'Solution', href: '#solution' },
+    { name: 'Benefits', href: '#benefits' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -41,12 +42,11 @@ export default function Header() {
               <span className={`font-bold text-xl transition-colors duration-300 ${
                 isScrolled ? 'text-black' : 'text-white'
               }`}>
-                Branch Out
+                Mintellect
               </span>
               <div className={`text-sm font-medium transition-colors duration-300 ${
                 isScrolled ? 'text-blue-600' : 'text-blue-400'
               }`}>
-                Consultancy
               </div>
             </div>
           </Link>
@@ -72,7 +72,7 @@ export default function Header() {
               href="/contact"
               className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-full font-semibold text-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
-              Get Started
+              Launch App
             </Link>
           </div>
 
@@ -108,7 +108,7 @@ export default function Header() {
                   className="block w-full text-center bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full font-semibold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Get Started
+                  Launch App
                 </Link>
               </div>
             </div>
