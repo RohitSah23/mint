@@ -36,30 +36,43 @@ export default function Footer() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="py-12 md:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
-          {/* Logo + Tagline */}
-          <div className="space-y-6">
+        <div className="py-12 md:py-16 flex flex-col lg:flex-row justify-between gap-12 px-6">
+          {/* Left Section - Logo + Tagline + Socials */}
+          <div className="flex flex-col max-w-sm space-y-6">
+            {/* Logo + Name */}
             <Link href="/" className="flex items-center space-x-3">
               <Image
                 src={Logo}
-                alt="Branch Out Consultancy"
+                alt="Mintellect"
                 width={50}
                 height={50}
                 className="w-12 h-12 sm:w-14 sm:h-14"
               />
-              <div>
-                <span className="font-bold text-lg sm:text-xl text-white">
-                  Mintellect
-                </span>
-              </div>
+              <span className="font-bold text-lg sm:text-xl text-white">
+                Mintellect
+              </span>
             </Link>
 
+            {/* Tagline */}
             <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
               Tokenizing Patent Potential. Accelerating Innovation.
             </p>
+
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+                <Link
+                  key={social.name}
+                  href={social.href}
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-300 group"
+                >
+                  <social.icon className="h-5 w-5 sm:h-6 sm:w-6 text-gray-300 group-hover:text-white" />
+                </Link>
+              ))}
+            </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Right Section - Quick Links */}
           <div className="space-y-6">
             <h3 className="text-base sm:text-lg font-bold text-white">
               Quick Links
@@ -76,24 +89,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Social Links */}
-          <div className="space-y-6">
-            <h3 className="text-base sm:text-lg font-bold text-white">
-              Connect With Us
-            </h3>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <Link
-                  key={social.name}
-                  href={social.href}
-                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-300 group"
-                >
-                  <social.icon className="h-5 w-5 sm:h-6 sm:w-6 text-gray-300 group-hover:text-white" />
-                </Link>
-              ))}
-            </div>
           </div>
         </div>
 
