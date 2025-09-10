@@ -7,20 +7,29 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background: `
-            radial-gradient(ellipse 85% 65% at 8% 8%, rgba(123, 97, 255, 0.45), transparent 60%),
-            radial-gradient(ellipse 75% 60% at 75% 35%, rgba(150, 120, 255, 0.35), transparent 62%),
-            radial-gradient(ellipse 70% 60% at 15% 80%, rgba(90, 180, 255, 0.35), transparent 62%),
-            radial-gradient(ellipse 70% 60% at 92% 92%, rgba(170, 130, 255, 0.40), transparent 62%),
-            linear-gradient(180deg, #e6e6ff 0%, #f0e6ff 100%)
-          `,
-        }}
-      />
+ {/* Grid + Glow on All Sides */}
+ <div
+   className="absolute inset-0 z-0 pointer-events-none"
+   style={{
+     backgroundImage: `
+       linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+       linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
+       radial-gradient(circle 600px at 0% 200px, #d5c5ff, transparent),     /* Left */
+       radial-gradient(circle 600px at 100% 200px, #d5c5ff, transparent),  /* Right */
+       radial-gradient(circle 600px at 50% 0px, #d5c5ff, transparent),     /* Top */
+       radial-gradient(circle 600px at 50% 100%, #d5c5ff, transparent)     /* Bottom */
+     `,
+     backgroundSize: `
+       96px 64px,    
+       96px 64px,    
+       100% 100%,    
+       100% 100%,
+       100% 100%,
+       100% 100%
+     `,
+   }}
+ />
 
-      {/* Content */}
       <div className="relative z-10 text-center max-w-3xl px-6">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
@@ -55,6 +64,7 @@ export default function Hero() {
             <ArrowRight className="w-5 h-5" />
           </button>
         </motion.div>
+  
       </div>
     </section>
   );
