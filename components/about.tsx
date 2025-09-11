@@ -26,21 +26,11 @@ export default function AboutSection() {
       className="relative w-full py-24 bg-gradient-to-br from-[#1A2A80] via-[#3B38A0] to-[#7A85C1] text-white overflow-hidden"
     >
       {/* Background glowing circles */}
-      <div className="min-h-screen w-full bg-white relative">
-  {/* Dual Gradient Overlay Background */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: `
-        linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
-        radial-gradient(circle 500px at 20% 80%, rgba(139,92,246,0.3), transparent),
-        radial-gradient(circle 500px at 80% 20%, rgba(59,130,246,0.3), transparent)
-      `,
-      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
-    }}
-  />
-     {/* Your Content/Components */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 left-1/4 w-32 h-32 rounded-full bg-[#B2B0E8]/30 blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-20 right-1/3 w-40 h-40 rounded-full bg-[#7A85C1]/25 blur-3xl animate-pulse-slow"></div>
+        <div className="absolute top-1/3 right-1/4 w-28 h-28 rounded-full bg-[#B2B0E8]/25 blur-2xl animate-pulse-slow"></div>
+      </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-20 relative z-10">
         {/* Header */}
@@ -119,8 +109,6 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-      </div>
-
     </section>
   );
 }
