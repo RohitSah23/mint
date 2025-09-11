@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from "react";
+import Image from 'next/image';
 
 export default function AboutSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,6 +26,16 @@ export default function AboutSection() {
       id="about"
       className="relative w-full py-24 bg-gradient-to-br from-[#1A2A80] via-[#3B38A0] to-[#7A85C1] text-white overflow-hidden"
     >
+          <div className="absolute inset-0 z-0">
+              <Image
+                src="/hero-bg.jpg"
+                alt="Abstract blockchain background"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-black/40" />
+            </div>
       {/* Background glowing circles */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-10 left-1/4 w-32 h-32 rounded-full bg-[#B2B0E8]/30 blur-3xl animate-pulse-slow"></div>

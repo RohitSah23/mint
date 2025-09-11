@@ -81,9 +81,15 @@ export default function Hero() {
         </div>
 
         {/* RIGHT: Orbiting Circles */}
-        <div className="flex justify-center lg:justify-end">
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }} 
+           className="flex justify-center lg:justify-end">
           <OrbitingCirclesDemo />
-        </div>
+        
+          </motion.div>
       </div>
     </section>
   );
