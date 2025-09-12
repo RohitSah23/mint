@@ -23,9 +23,9 @@ export default function Footer() {
   return (
     <footer className="bg-[#242424] text-white relative overflow-hidden">
       {/* Grid Background */}
-          <div className="absolute inset-0 z-0">
+          <div className="fixed inset-0 z-0">
               <Image
-                src="/bg-test4.jpg"
+          src="/hero-bg.jpg"
                 alt="Abstract blockchain background"
                 fill
                 className="object-cover scale-100"
@@ -33,25 +33,8 @@ export default function Footer() {
               />
               <div className="absolute inset-0 bg-black/50" />
             </div>
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute top-10 left-1/4 w-32 h-32 rounded-full bg-emerald-400/30 blur-3xl animate-pulse-slow"></div>
-              <div className="absolute bottom-20 right-1/3 w-40 h-40 rounded-full bg-emerald-300/20 blur-3xl animate-pulse-slow"></div>
-              <div className="absolute top-1/3 right-1/4 w-28 h-28 rounded-full bg-emerald-400/25 blur-2xl animate-pulse-slow"></div>
-              <div className="absolute top-1/2 left-10 w-24 h-24 rounded-full bg-emerald-500/15 blur-2xl animate-pulse-slow"></div>
-              <div className="absolute bottom-10 left-1/2 w-48 h-48 rounded-full bg-emerald-300/10 blur-[100px] animate-pulse-slow"></div>
-              <div className="absolute top-0 right-10 w-20 h-20 rounded-full bg-emerald-400/20 blur-xl animate-pulse-slow"></div>
-              <div className="absolute bottom-1/3 right-0 w-36 h-36 rounded-full bg-emerald-500/20 blur-3xl animate-pulse-slow"></div>
-            </div>
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `linear-gradient(rgba(207, 20, 43, 0.3) 1px, transparent 1px),
-                             linear-gradient(90deg, rgba(207, 20, 43, 0.3) 1px, transparent 1px)`,
-            backgroundSize: '60px 60px',
-          }}
-        ></div>
-      </div>
+         
+     
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 relative">

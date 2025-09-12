@@ -27,9 +27,9 @@ export default function ContactSection() {
       id="contact"
       className="relative w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 py-24 overflow-hidden text-white"
     >
-          <div className="absolute inset-0 z-0">
+          <div className="fixed inset-0 z-0">
               <Image
-                src="/bg-test3.jpg"
+          src="/hero-bg.jpg"
                 alt="Abstract blockchain background"
                 fill
                 className="object-cover scale-120"
@@ -37,7 +37,7 @@ export default function ContactSection() {
               />
               <div className="absolute inset-0 bg-black/50" />
             </div>
-            <div className="absolute inset-0 pointer-events-none">
+            {/* <div className="absolute inset-0 pointer-events-none">
               <div className="absolute top-10 left-1/4 w-32 h-32 rounded-full bg-emerald-400/30 blur-3xl animate-pulse-slow"></div>
               <div className="absolute bottom-20 right-1/3 w-40 h-40 rounded-full bg-emerald-300/20 blur-3xl animate-pulse-slow"></div>
               <div className="absolute top-1/3 right-1/4 w-28 h-28 rounded-full bg-emerald-400/25 blur-2xl animate-pulse-slow"></div>
@@ -45,12 +45,12 @@ export default function ContactSection() {
               <div className="absolute bottom-10 left-1/2 w-48 h-48 rounded-full bg-emerald-300/10 blur-[100px] animate-pulse-slow"></div>
               <div className="absolute top-0 right-10 w-20 h-20 rounded-full bg-emerald-400/20 blur-xl animate-pulse-slow"></div>
               <div className="absolute bottom-1/3 right-0 w-36 h-36 rounded-full bg-emerald-500/20 blur-3xl animate-pulse-slow"></div>
-            </div>
+            </div> */}
       {/* Background floating glows */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-10 left-1/4 w-32 h-32 rounded-full bg-emerald-400/30 blur-3xl animate-pulse-slow"></div>
         <div className="absolute bottom-20 right-1/3 w-40 h-40 rounded-full bg-emerald-300/20 blur-3xl animate-pulse-slow"></div>
-      </div>
+      </div> */}
 
       <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center gap-8 text-center">
         <div

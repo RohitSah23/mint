@@ -66,7 +66,7 @@ export default function BenefitSection() {
     >
           <div className="absolute inset-0 z-0">
               <Image
-                src="/bg-test4.jpg"
+          src="/hero-bg.jpg"
                 alt="Abstract blockchain background"
                 fill
                 className="object-cover scale-105"

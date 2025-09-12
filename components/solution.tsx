@@ -35,7 +35,7 @@ export default function SolutionSection() {
     >
     <div className="absolute inset-0 z-0">
         <Image
-          src="/bg-test3.jpg"
+          src="/hero-bg.jpg"
           alt="Abstract blockchain background"
           fill
           className="object-cover scale-120"
