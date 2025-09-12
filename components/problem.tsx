@@ -32,39 +32,53 @@ export default function ProblemSection() {
   return (
     <section
       id="problem"
-      className="relative w-full py-24 bg-gradient-to-br from-[#1A2A80] via-[#3B38A0] to-[#7A85C1] text-white overflow-hidden"
+      className="relative w-full py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white overflow-hidden"
     >
-      {/* Background floating shapes */}
+      {/* Floating background glows – same as SolutionSection */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-10 w-36 h-36 rounded-full bg-[#B2B0E8]/20 blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 rounded-full bg-[#7A85C1]/25 blur-3xl animate-pulse-slow"></div>
-        <div className="absolute top-1/3 right-1/4 w-28 h-28 rounded-full bg-[#B2B0E8]/30 blur-2xl animate-pulse-slow"></div>
+        <div className="absolute top-10 left-1/4 w-32 h-32 rounded-full bg-emerald-400/30 blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-20 right-1/3 w-40 h-40 rounded-full bg-emerald-300/20 blur-3xl animate-pulse-slow"></div>
+        <div className="absolute top-1/3 right-1/4 w-28 h-28 rounded-full bg-emerald-400/25 blur-2xl animate-pulse-slow"></div>
+        <div className="absolute top-1/2 left-10 w-24 h-24 rounded-full bg-emerald-500/15 blur-2xl animate-pulse-slow"></div>
+        <div className="absolute bottom-10 left-1/2 w-48 h-48 rounded-full bg-emerald-300/10 blur-[100px] animate-pulse-slow"></div>
+        <div className="absolute top-0 right-10 w-20 h-20 rounded-full bg-emerald-400/20 blur-xl animate-pulse-slow"></div>
+        <div className="absolute bottom-1/3 right-0 w-36 h-36 rounded-full bg-emerald-500/20 blur-3xl animate-pulse-slow"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-16 relative z-10">
-        {/* Section Header */}
-        <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        {/* Header */}
+        <div
+          className={`text-center transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4">What We Solve</h2>
-          <p className="text-[#B2B0E8] max-w-2xl mx-auto text-lg md:text-xl">
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg md:text-xl">
             We tackle the challenges that prevent innovation from reaching the world.
           </p>
         </div>
 
         {/* Problems Grid */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-200 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           {problems.map((p, idx) => (
             <div
               key={idx}
-              className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 shadow-lg flex flex-col gap-4 hover:scale-105 transform transition-transform duration-500"
+              className="relative bg-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-xl flex flex-col gap-4 hover:scale-105 transform transition-transform duration-500 border border-white/20"
             >
               <div className="flex items-center gap-4">
-                <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#B2B0E8]/20 text-xl">
+                <div className="flex items-center justify-center w-14 h-14 rounded-full bg-white/20 text-xl">
                   {p.icon}
                 </div>
-                <h3 className="text-[#B2B0E8] text-xl font-semibold">{p.title}</h3>
+                <h3 className="text-white/90 text-xl font-semibold">{p.title}</h3>
               </div>
-              <p className="text-[#B2B0E8]/80 leading-relaxed">{p.desc}</p>
-              <div className="absolute top-4 right-4 text-2xl font-bold text-[#B2B0E8]/50">{p.number}</div>
+              <p className="text-gray-200 leading-relaxed">{p.desc}</p>
+              <div className="absolute top-4 right-4 text-2xl font-bold text-white/20">
+                {p.number}
+              </div>
             </div>
           ))}
         </div>
