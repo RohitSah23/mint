@@ -64,8 +64,8 @@ export default function AboutSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-8 border border-emerald-400/20 hover:scale-105 transition-transform">
-            <div className="text-3xl font-bold text-emerald-300 mb-4">30,000+</div>
+          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-transform">
+            <div className="text-3xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-500 bg-clip-text text-transparent mb-4">30,000+</div>
             <div className="text-white/80 mb-4 font-medium">
               Patents stuck in approval limbo annually
             </div>
@@ -75,8 +75,8 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-8 border border-emerald-400/20 hover:scale-105 transition-transform">
-            <div className="mb-2 font-semibold text-emerald-300">✨ The Solution</div>
+          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-transform">
+            <div className="mb-2 font-semibold bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-500 bg-clip-text text-transparent">✨ The Solution</div>
             <p className="font-bold text-white mb-3">Mintellect is the solution.</p>
             <p className="text-gray-300 leading-relaxed">
               By tokenizing pending patents as verified digital assets, Mintellect enables early licensing,
@@ -91,7 +91,7 @@ export default function AboutSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-8 border border-emerald-400/20 hover:scale-105 transition-transform">
+          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-transform">
             <div className="text-3xl mb-3">🎯</div>
             <p className="text-gray-300 leading-relaxed">
               Our mission is to convert idle intellectual property into active opportunities —
@@ -106,18 +106,18 @@ export default function AboutSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-6 border border-emerald-400/20 flex flex-col items-center hover:scale-105 transition-transform">
-            <div className="text-3xl md:text-4xl font-bold text-emerald-300">3-5</div>
+          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-6 border border-indigo-400/30 flex flex-col items-center hover:scale-105 transition-transform">
+            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-500 bg-clip-text text-transparent">3-5</div>
             <div className="text-gray-300 mt-1 text-sm md:text-base">Years Wait Time</div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-6 border border-emerald-400/20 flex flex-col items-center hover:scale-105 transition-transform">
-            <div className="text-3xl md:text-4xl font-bold text-emerald-300">∞</div>
+          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-6 border border-indigo-400/30 flex flex-col items-center hover:scale-105 transition-transform">
+            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-500 bg-clip-text text-transparent">∞</div>
             <div className="text-gray-300 mt-1 text-sm md:text-base">Lost Opportunities</div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-6 border border-emerald-400/20 flex flex-col items-center hover:scale-105 transition-transform">
-            <div className="text-3xl md:text-4xl font-bold text-emerald-300">1st</div>
+          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-6 border border-indigo-400/30 flex flex-col items-center hover:scale-105 transition-transform">
+            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-500 bg-clip-text text-transparent">1st</div>
             <div className="text-gray-300 mt-1 text-sm md:text-base">Blockchain IP Marketplace</div>
           </div>
         </div>

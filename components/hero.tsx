@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import { OrbitingCirclesDemo } from "./orbit"; // ✅ Import your orbiting component
+import { OrbitingCirclesDemo } from "./orbit"; 
 import Link from "next/link";
 
 export default function Hero() {
