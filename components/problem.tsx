@@ -82,14 +82,14 @@ export default function ProblemSection() {
           {problems.map((p, idx) => (
             <div
               key={idx}
-              className="relative bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transform transition-transform duration-500 border border-yellow-400/20"
+              className="relative bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transform transition-transform duration-500 border border-emerald-400/20"
             >
               {/* Icon & Title */}
               <div className="flex items-center gap-4">
                 <div className="flex items-center justify-center w-14 h-14 rounded-full bg-white/20 text-xl text-white">
                   {p.icon}
                 </div>
-                <h3 className="text-white font-semibold text-xl">{p.title}</h3>
+                <h3 className="text-emerald-300 font-semibold text-xl">{p.title}</h3>
               </div>
 
               {/* Image */}

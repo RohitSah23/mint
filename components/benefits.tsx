@@ -115,7 +115,7 @@ export default function BenefitSection() {
             <div
               key={idx}
               className="relative rounded-2xl p-6 shadow-xl flex flex-col gap-4 hover:scale-105 transform transition-transform duration-500
-                         bg-white/10 backdrop-blur-xl border border-white/20"
+                         bg-white/10 backdrop-blur-xl border border-emerald-400/20 "
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-400/20 text-xl font-bold text-white border border-emerald-400/50 shadow-inner">

@@ -78,12 +78,12 @@ export default function SolutionSection() {
               }`}
             >
               {/* Number */}
-              <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 rounded-full bg-white/10 text-white text-2xl font-bold border-2 border-white/20">
+              <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 rounded-full bg-white/10 text-white text-2xl font-bold border-2  border-emerald-400/20 hover:scale-105 transition-transform">
                 {step.number}
               </div>
 
               {/* Card */}
-              <div className="flex-1 bg-white/10 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-white/20 hover:scale-[1.02] transition-transform duration-300">
+              <div className="flex-1 bg-white/10 backdrop-blur-lg rounded-2xl p-6 shadow-xl border  border-emerald-400/20 hover:scale-105  transition-transform duration-300">
                 <div className="flex items-center gap-4 mb-2">
                   <div className="text-4xl">{step.icon}</div>
                   <h3 className="text-xl font-semibold text-white">{step.title}</h3>
