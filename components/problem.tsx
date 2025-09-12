@@ -92,7 +92,7 @@ export default function ProblemSection() {
                 <h3 className="text-emerald-300 font-semibold text-xl">{p.title}</h3>
               </div>
 
-              {/* Image */}
+              {/* Image
               <div className="w-full h-40 relative rounded-lg overflow-hidden">
                 <Image
                   src={p.img}
@@ -100,7 +100,7 @@ export default function ProblemSection() {
                   fill
                   className="object-cover"
                 />
-              </div>
+              </div> */}
 
               {/* Description */}
               <p className="text-gray-100 leading-relaxed">{p.desc}</p>
