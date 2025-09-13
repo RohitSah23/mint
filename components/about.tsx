@@ -22,7 +22,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative w-full py-24 bg-gradient-to-br  text-white overflow-hidden"
+      className="relative w-full py-24 bg-gradient-to-br text-white overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 z-0">
@@ -35,15 +35,6 @@ export default function AboutSection() {
         />
         <div className="absolute inset-0 bg-black/50" />
       </div>
-      {/* <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-1/4 w-32 h-32 rounded-full bg-emerald-400/30 blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-1/3 w-40 h-40 rounded-full bg-emerald-300/20 blur-3xl animate-pulse-slow"></div>
-        <div className="absolute top-1/3 right-1/4 w-28 h-28 rounded-full bg-emerald-400/25 blur-2xl animate-pulse-slow"></div>
-        <div className="absolute top-1/2 left-10 w-24 h-24 rounded-full bg-emerald-500/15 blur-2xl animate-pulse-slow"></div>
-        <div className="absolute bottom-10 left-1/2 w-48 h-48 rounded-full bg-emerald-300/10 blur-[100px] animate-pulse-slow"></div>
-        <div className="absolute top-0 right-10 w-20 h-20 rounded-full bg-emerald-400/20 blur-xl animate-pulse-slow"></div>
-        <div className="absolute bottom-1/3 right-0 w-36 h-36 rounded-full bg-emerald-500/20 blur-3xl animate-pulse-slow"></div>
-      </div> */}
 
       <div className="max-w-7xl mx-auto px-6 flex flex-col gap-16 relative z-10">
         {/* Header */}
@@ -64,7 +55,11 @@ export default function AboutSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-transform">
+          <div className="group relative bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-transform overflow-hidden">
+            {/* Shine */}
+            <span className="pointer-events-none absolute top-0 left-[-120%] w-[140%] h-full 
+              bg-gradient-to-r from-transparent via-white/20 to-transparent 
+              transition-all duration-700 ease-in-out group-hover:left-[120%]" />
             <div className="text-3xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-500 bg-clip-text text-transparent mb-4">30,000+</div>
             <div className="text-white/80 mb-4 font-medium">
               Patents stuck in approval limbo annually
@@ -75,7 +70,10 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-transform">
+          <div className="group relative bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-transform overflow-hidden">
+            <span className="pointer-events-none absolute top-0 left-[-120%] w-[140%] h-full 
+              bg-gradient-to-r from-transparent via-white/20 to-transparent 
+              transition-all duration-700 ease-in-out group-hover:left-[120%]" />
             <div className="mb-2 font-semibold bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-500 bg-clip-text text-transparent">✨ The Solution</div>
             <p className="font-bold text-white mb-3">Mintellect is the solution.</p>
             <p className="text-gray-300 leading-relaxed">
@@ -91,7 +89,10 @@ export default function AboutSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-transform">
+          <div className="group relative bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-transform overflow-hidden">
+            <span className="pointer-events-none absolute top-0 left-[-120%] w-[140%] h-full 
+              bg-gradient-to-r from-transparent via-white/20 to-transparent 
+              transition-all duration-700 ease-in-out group-hover:left-[120%]" />
             <div className="text-3xl mb-3">🎯</div>
             <p className="text-gray-300 leading-relaxed">
               Our mission is to convert idle intellectual property into active opportunities —
@@ -106,20 +107,24 @@ export default function AboutSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-6 border border-indigo-400/30 flex flex-col items-center hover:scale-105 transition-transform">
-            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-500 bg-clip-text text-transparent">3-5</div>
-            <div className="text-gray-300 mt-1 text-sm md:text-base">Years Wait Time</div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-6 border border-indigo-400/30 flex flex-col items-center hover:scale-105 transition-transform">
-            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-500 bg-clip-text text-transparent">∞</div>
-            <div className="text-gray-300 mt-1 text-sm md:text-base">Lost Opportunities</div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-6 border border-indigo-400/30 flex flex-col items-center hover:scale-105 transition-transform">
-            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-500 bg-clip-text text-transparent">1st</div>
-            <div className="text-gray-300 mt-1 text-sm md:text-base">Blockchain IP Marketplace</div>
-          </div>
+          {[
+            { value: "3-5", label: "Years Wait Time" },
+            { value: "∞", label: "Lost Opportunities" },
+            { value: "1st", label: "Blockchain IP Marketplace" },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="group relative bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl p-6 border border-indigo-400/30 flex flex-col items-center hover:scale-105 transition-transform overflow-hidden"
+            >
+              <span className="pointer-events-none absolute top-0 left-[-120%] w-[140%] h-full 
+                bg-gradient-to-r from-transparent via-white/20 to-transparent 
+                transition-all duration-700 ease-in-out group-hover:left-[120%]" />
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-500 bg-clip-text text-transparent">
+                {item.value}
+              </div>
+              <div className="text-gray-300 mt-1 text-sm md:text-base">{item.label}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

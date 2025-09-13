@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+
 export default function BenefitSection() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -60,30 +61,18 @@ export default function BenefitSection() {
   ];
 
   return (
-    <section
-      id="benefits"
-      className="relative w-full  py-24 overflow-hidden text-white"
-    >
-          <div className="absolute inset-0 z-0">
-              <Image
+    <section id="benefits" className="relative w-full py-24 overflow-hidden text-white">
+      {/* Background */}
+      <div className="absolute inset-0 z-0">
+        <Image
           src="/hero-bg.jpg"
-                alt="Abstract blockchain background"
-                fill
-                className="object-cover scale-105"
-                priority
-              />
-              <div className="absolute inset-0 bg-black/50" />
-            </div>
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute top-10 left-1/4 w-32 h-32 rounded-full bg-emerald-400/30 blur-3xl animate-pulse-slow"></div>
-              <div className="absolute bottom-20 right-1/3 w-40 h-40 rounded-full bg-emerald-300/20 blur-3xl animate-pulse-slow"></div>
-              <div className="absolute top-1/3 right-1/4 w-28 h-28 rounded-full bg-emerald-400/25 blur-2xl animate-pulse-slow"></div>
-              <div className="absolute top-1/2 left-10 w-24 h-24 rounded-full bg-emerald-500/15 blur-2xl animate-pulse-slow"></div>
-              <div className="absolute bottom-10 left-1/2 w-48 h-48 rounded-full bg-emerald-300/10 blur-[100px] animate-pulse-slow"></div>
-              <div className="absolute top-0 right-10 w-20 h-20 rounded-full bg-emerald-400/20 blur-xl animate-pulse-slow"></div>
-              <div className="absolute bottom-1/3 right-0 w-36 h-36 rounded-full bg-emerald-500/20 blur-3xl animate-pulse-slow"></div>
-            </div>
-      {/* Floating background glows */}
+          alt="Abstract blockchain background"
+          fill
+          className="object-cover scale-105"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-10 left-1/4 w-32 h-32 rounded-full bg-emerald-400/30 blur-3xl animate-pulse-slow"></div>
         <div className="absolute bottom-20 right-1/3 w-40 h-40 rounded-full bg-emerald-300/20 blur-3xl animate-pulse-slow"></div>
@@ -97,9 +86,7 @@ export default function BenefitSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-3">
-            Benefits for Everyone
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-3">Benefits for Everyone</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Discover how our platform creates value across the entire innovation ecosystem
           </p>
@@ -114,16 +101,24 @@ export default function BenefitSection() {
           {benefits.map((benefit, idx) => (
             <div
               key={idx}
-              className="relative rounded-2xl p-6 shadow-xl flex flex-col gap-4 hover:scale-105 transform transition-transform duration-500
-                         bg-white/10 backdrop-blur-xl border border-indigo-400/30 "
+              className="group relative rounded-2xl p-6 shadow-xl flex flex-col gap-4 hover:scale-105 transform transition-transform duration-500
+                         bg-white/10 backdrop-blur-xl border border-indigo-400/30 overflow-hidden"
             >
-              <div className="flex items-center gap-3 mb-4">
+              {/* Shine */}
+              <span
+                className="pointer-events-none absolute top-0 left-[-120%] w-[140%] h-full
+                  bg-gradient-to-r from-transparent via-white/20 to-transparent
+                  transition-all duration-700 ease-in-out group-hover:left-[120%]"
+              ></span>
+
+              <div className="flex items-center gap-3 mb-4 relative z-10">
                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-400/20 text-xl font-bold text-white border border-emerald-400/50 shadow-inner">
                   {benefit.icon}
                 </div>
                 <h3 className="text-xl font-semibold">{benefit.title}</h3>
               </div>
-              <ul className="flex flex-col gap-2 pl-2">
+
+              <ul className="flex flex-col gap-2 pl-2 relative z-10">
                 {benefit.items.map((item, i) => (
                   <li key={i} className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 mt-1 flex-shrink-0 shadow"></span>

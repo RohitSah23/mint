@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+
 export default function ContactSection() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -27,47 +28,48 @@ export default function ContactSection() {
       id="contact"
       className="relative w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 py-24 overflow-hidden text-white"
     >
-          <div className="fixed inset-0 z-0">
-              <Image
+      {/* Background
+      <div className="fixed inset-0 z-0">
+        <Image
           src="/hero-bg.jpg"
-                alt="Abstract blockchain background"
-                fill
-                className="object-cover scale-120"
-                priority
-              />
-              <div className="absolute inset-0 bg-black/50" />
-            </div>
-            {/* <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute top-10 left-1/4 w-32 h-32 rounded-full bg-emerald-400/30 blur-3xl animate-pulse-slow"></div>
-              <div className="absolute bottom-20 right-1/3 w-40 h-40 rounded-full bg-emerald-300/20 blur-3xl animate-pulse-slow"></div>
-              <div className="absolute top-1/3 right-1/4 w-28 h-28 rounded-full bg-emerald-400/25 blur-2xl animate-pulse-slow"></div>
-              <div className="absolute top-1/2 left-10 w-24 h-24 rounded-full bg-emerald-500/15 blur-2xl animate-pulse-slow"></div>
-              <div className="absolute bottom-10 left-1/2 w-48 h-48 rounded-full bg-emerald-300/10 blur-[100px] animate-pulse-slow"></div>
-              <div className="absolute top-0 right-10 w-20 h-20 rounded-full bg-emerald-400/20 blur-xl animate-pulse-slow"></div>
-              <div className="absolute bottom-1/3 right-0 w-36 h-36 rounded-full bg-emerald-500/20 blur-3xl animate-pulse-slow"></div>
-            </div> */}
-      {/* Background floating glows */}
-      {/* <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-1/4 w-32 h-32 rounded-full bg-emerald-400/30 blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-1/3 w-40 h-40 rounded-full bg-emerald-300/20 blur-3xl animate-pulse-slow"></div>
+          alt="Abstract blockchain background"
+          fill
+          className="object-cover scale-120"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/50" />
       </div> */}
 
-      <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center gap-8 text-center">
+      {/* Glassmorphism Card Wrapper */}
+      <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center gap-8">
         <div
-          className={`transition-all duration-1000 ease-out transform ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`group relative w-full px-6 py-10 transform 
+            bg-white/10 backdrop-blur-xl border border-indigo-400/30 overflow-hidden rounded-2xl shadow-2xl transition-all duration-1000 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Backed by Blockchain. Boosted by AI. Built for Impact.
+          {/* Shine */}
+          <span className="pointer-events-none absolute top-0 left-[-120%] w-[140%] h-full 
+            bg-gradient-to-r from-transparent via-white/20 to-transparent 
+            transition-all duration-700 ease-in-out group-hover:left-[120%]" />
+
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
+            Backed by Blockchain.{" "}
+          <span>
+               Boosted by AI. {" "}
+            </span>
+            <span>
+
+             Built for Impact.
+            </span>
           </h2>
-          <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed text-center">
             Mintellect is more than a marketplace — it&apos;s a movement to
             reimagine how the world unlocks ideas. We begin in India, but our
             vision is global.
           </p>
 
-          {/* Centered button with width just enough for text */}
+          {/* Centered Button */}
           <div className="flex justify-center">
             <Link
               href=""
