@@ -28,25 +28,8 @@ export default function SolutionSection() {
   return (
     <section
       id="solution"
-      className="relative w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 py-16 lg:py-24 overflow-hidden text-white"
+      className="relative w-full py-16 lg:py-24 overflow-hidden text-white"
     >
-      {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/hero-bg.jpg"
-          alt="Abstract blockchain background"
-          fill
-          className="object-cover scale-120"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
-
-      {/* Floating Glows */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-1/4 w-20 h-20 lg:w-32 lg:h-32 rounded-full bg-emerald-400/30 blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-1/3 w-24 h-24 lg:w-40 lg:h-40 rounded-full bg-emerald-300/20 blur-3xl animate-pulse-slow"></div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 relative z-10 flex flex-col gap-12 lg:gap-16">
         {/* Header */}

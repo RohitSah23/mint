@@ -21,21 +21,8 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#242424] text-white relative overflow-hidden">
-      {/* Grid Background */}
-          <div className="fixed inset-0 z-0">
-              <Image
-          src="/hero-bg.jpg"
-                alt="Abstract blockchain background"
-                fill
-                className="object-cover scale-100"
-                priority
-              />
-              <div className="absolute inset-0 bg-black/50" />
-            </div>
-         
+    <footer className=" text-white relative overflow-hidden">
      
-
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 relative">
         <div className="py-12 md:py-16 flex flex-col lg:flex-row justify-between gap-12 px-6">

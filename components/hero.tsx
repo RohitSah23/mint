@@ -12,18 +12,16 @@ export default function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden"
       aria-label="Tokenizing Patent Potential Hero Section"
     >
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
+         <div className="fixed inset-0 z-0">
+              <Image
           src="/hero-bg.jpg"
-          alt="Abstract blockchain background"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40" />
-      </div>
-
+                alt="Abstract blockchain background"
+                fill
+                className="object-cover scale-100"
+                priority
+              />
+              <div className="absolute inset-0 bg-black/50" />
+            </div>
       {/* Content + Orbiting Circle */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 py-30 lg:py-0  items-center">
         {/* LEFT: Hero Content */}

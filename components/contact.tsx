@@ -26,21 +26,9 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 py-24 overflow-hidden text-white"
-    >
-      {/* Background
-      <div className="fixed inset-0 z-0">
-        <Image
-          src="/hero-bg.jpg"
-          alt="Abstract blockchain background"
-          fill
-          className="object-cover scale-120"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/50" />
-      </div> */}
-
-      {/* Glassmorphism Card Wrapper */}
+      className="relative w-full py-24 overflow-hidden text-white"
+    >  
+    {/* Glassmorphism Card Wrapper */}
       <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center gap-8">
         <div
           className={`group relative w-full px-6 py-10 transform 

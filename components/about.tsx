@@ -23,20 +23,8 @@ export default function AboutSection() {
     <section
       id="about"
       className="relative w-full py-24 bg-gradient-to-br text-white overflow-hidden"
-    >
-      {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/hero-bg.jpg"
-          alt="Abstract blockchain background"
-          fill
-          className="object-cover scale-120"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 flex flex-col gap-16 relative z-10">
+    >  
+    <div className="max-w-7xl mx-auto px-6 flex flex-col gap-16 relative z-10">
         {/* Header */}
         <div
           className={`text-center transition-all duration-1000 ${

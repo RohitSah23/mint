@@ -29,14 +29,8 @@ export default function ProblemSection() {
   return (
     <section
       id="problem"
-      className="relative w-full py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white overflow-hidden"
+      className="relative w-full py-24 text-white overflow-hidden"
     >
-      {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <Image src="/hero-bg.jpg" alt="Background" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
-
       <div className="max-w-7xl mx-auto px-6 flex flex-col gap-16 relative z-10">
         {/* Header */}
         <div className={`text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
