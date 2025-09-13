@@ -45,7 +45,9 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <Image src={Logo} alt="Mintellect" width={40} height={40} />
-          <span className="text-lg font-semibold text-indigo-800">MINTELLECT</span>
+          <span className="text-2xl  text-[#6258b1]"
+          style={{ fontFamily:'Tagesschrift, system-ui' }}
+          >Mintellect</span>
         </Link>
 
         {/* Desktop Nav */}
